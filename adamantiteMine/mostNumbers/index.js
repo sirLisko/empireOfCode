@@ -8,7 +8,7 @@ function mostDifference() {
     return 0;
 }
 
-var assert = require('assert');
+var assert = require("assert");
 
 if (!global.is_checking) {
     // These "asserts" using only for self-checking and not necessary for auto-testing

@@ -3,7 +3,7 @@
 function findMessage(text){
     var filter = text.match(/[A-Z]/g);
 
-    return (filter) ? filter.join('') : '';
+    return (filter) ? filter.join("") : "";
 }
 
 var assert = require("assert");
