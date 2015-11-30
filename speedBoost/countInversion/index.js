@@ -1,17 +1,18 @@
 "use strict";
 
-function countInversion(sequence) {
-    var count = 0;
+function countInversion(sequence, result) {
+	result = result || 0;
+	var control = sequence.shift();
+	
+	var inverted = sequence.filter(function(num){
+		return num < control;
+	}).length;
 
-    for (var i = 0; i < sequence.length; i++) {
-        for (var j = i + 1; j < sequence.length; j++) {
-            if (sequence[i] > sequence[j]) {
-                count++;
-            }
-        }
-    }
-
-    return count;
+	if(sequence.length){
+		return countInversion(sequence, result + inverted)
+	} else {
+		return result;
+	}
 }
 
 var assert = require("assert");
