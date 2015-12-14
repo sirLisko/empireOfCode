@@ -21,5 +21,8 @@
     "env": {
         "node": true
     },
+    "ecmaFeatures": {
+        "arrowFunctions": true
+    },
     "extends": "eslint:recommended"
 }
